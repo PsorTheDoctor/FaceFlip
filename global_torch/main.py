@@ -12,8 +12,8 @@ from encoder4editing.utils.common import tensor2im
 from encoder4editing.models.psp import pSp
 
 import clip
-from global_torch.manipulate import Manipulator
-from global_torch.StyleCLIP import GetDt, GetBoundary
+from manipulate import Manipulator
+from StyleCLIP import GetDt, GetBoundary
 
 dataset_name = 'ffhq'
 experiment_type = 'ffhq_encode'
@@ -72,8 +72,8 @@ def load_model():
     return model, M
 
 
-def main(image_path, model, manipulator, target, neutral='a face',
-         alpha=4.1, beta=0.15, resize_dims=(256, 256)):
+def run_model(image_path, model, manipulator, target, neutral='a face',
+              alpha=4.1, beta=0.15, resize_dims=(256, 256)):
     """
     :param model: CLIP ViT model
     :param manipulator: custom image manipulator
@@ -142,4 +142,4 @@ def main(image_path, model, manipulator, target, neutral='a face',
 # Example usage
 # if __name__ == '__main__':
     # model, manipulator = load_model()
-    # main('adam.jpg', model, manipulator, target='a grumpy face')
+    # run_model('adam.jpg', model, manipulator, target='a grumpy face')
