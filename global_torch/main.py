@@ -68,14 +68,15 @@ def load_model():
     net.eval()
     net.cuda()
     print('Model successfully loaded!')
-    return model, M
+    return model, M, net
 
 
-def run_model(image_path, model, manipulator, target, neutral='a face',
+def run_model(image_path, model, manipulator, net, target, neutral='a face',
               alpha=4.1, beta=0.15, resize_dims=(256, 256)):
     """
     :param model: CLIP ViT model
     :param manipulator: custom image manipulator
+    :param net: neural network
     :param image_path: a path to the given image
     :param target: a prompt describing desired modifications
     :param neutral: a prompt describing the input image
@@ -141,5 +142,5 @@ def run_model(image_path, model, manipulator, target, neutral='a face',
 
 # Example usage
 # if __name__ == '__main__':
-    # model, manipulator = load_model()
+    # model, manipulator, net = load_model()
     # run_model('adam.jpg', model, manipulator, target='a grumpy face')
