@@ -1,3 +1,3 @@
 # FaceFlip
 
-A logic for the face modifying app.
+Logic for the face modifying app.
