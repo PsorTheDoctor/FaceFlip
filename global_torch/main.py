@@ -8,7 +8,6 @@ import torchvision.transforms as transforms
 sys.path.append(".")
 sys.path.append("..")
 
-from encoder4editing.utils.common import tensor2im
 from encoder4editing.models.psp import pSp
 
 import clip
