@@ -110,7 +110,7 @@ def run_model(image_path, model, manipulator, net, target, neutral='a face',
     torch.save(latents, 'latents.pt')
 
     img_index = 0
-    latents = torch.load('/content/encoder4editing/latents.pt')
+    latents = torch.load('/content/FaceFlip/global_torch/latents.pt')
     dlatents_loaded = M.G.synthesis.W2S(latents)
 
     img_indexs = [img_index]
