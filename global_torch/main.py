@@ -81,6 +81,7 @@ def run_model(image_path, model, manipulator, target, neutral='a face',
     :param neutral: a prompt describing the input image
     :param alpha: manipulation strength, ranges (-10, 10)
     :param beta: disentanglement threshold, ranges (0.08 - 0.3)
+    :param resize_dims: image size
     :return: a modified PIL image
     """
     M = manipulator
