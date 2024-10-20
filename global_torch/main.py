@@ -136,7 +136,7 @@ def run_model(image_path, model, manipulator, net, target, neutral='a face',
     boundary_tmp2, c = GetBoundary(fs3, dt, M, threshold=beta)
     codes = M.MSCode(dlatent_tmp, boundary_tmp2)
     out = M.GenerateImg(codes)
-    generated = Image.fromarray(out[0, 0])
+    generated = Image.fromarray(out[0, 0]).resize(resize_dims)
     return generated
 
 
